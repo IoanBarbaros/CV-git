@@ -1,0 +1,8 @@
+:root{
+    --header-color: #1a1930;
+    --white-color: white;
+    --hover-color: rgb(12, 231, 247);
+    --primary-color: #0e1d3d;
+    --secondary-color: #2e2c52;
+    --gradient-color: -webkit-linear-gradient(#f0a7a1,#f54d40);
+}

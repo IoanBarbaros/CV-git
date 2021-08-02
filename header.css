@@ -1,0 +1,70 @@
+@import url(theme.css);
+
+.header {
+    background-color: var(--header-color);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+
+}
+
+html, body{
+	height:100%;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    display: flex;
+    width: auto;
+    color: white;
+}
+
+ul.menu {
+    display: inline-flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    overflow:visible;
+  }
+
+@media screen and (max-width: 640px){
+    .header{
+        justify-content: center;
+    }
+    ul.menu{
+        flex-direction: column;
+        font-size: 75%;
+    }
+}
+  
+ul.menu li a {
+    display:block;
+    color: var(--white-color);
+    text-align: center;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-size: 1.5625em;
+  }
+ul.menu li a:hover:not(.active) {
+    background-color: var(--hover-color) ;
+}
+ul.menu li a:active{
+    background-color: var(--hover-color);
+}
+
+a {
+    display:inline;
+}
+img{
+    display: flex;
+    max-height: 78px;
+}
+    
