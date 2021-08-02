@@ -11,7 +11,7 @@
 
 .human{
     display: inline-flex;
-    max-height: 400px; 
+    max-height: 400px;
     justify-content: left;
     padding: 50px;
 }
@@ -27,7 +27,7 @@
 }
 
 .text{
-    font-size:60px;
+    font-size:5vw;
     font-family: 'Shadows Into Light', cursive;
     background: var(--gradient-color);
     background-clip: unset;
@@ -36,26 +36,34 @@
     margin: 0;
 }
 .detail {
-    font-size: 35px;
+    font-size: 2.5vw;
     margin-right: -200px;
     font-family: 'Slabo 27px', serif;
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 850px){
     .face{
-        align-content: flex-end;
+        padding-top: 150px;
         flex-flow: column;
-        padding-top: 300px;
-    }
-    .human
-    {
-        height: 300px;;
     }
     .intro{
         align-items: flex-start;
         justify-content: flex-start;
-        flex-grow:-1;
+
     }
-
+    .human{
+     height: 300px;
+    }
 }
-
-
+@media screen and (max-width: 630px){
+    .face{
+        padding-top: 300px;
+        padding-bottom: 150px;
+    }
+    .text{
+        font-size: 7vw;
+    }
+    .detail{
+        font-size: 5vw;
+    }
+    
+}
