@@ -3,16 +3,17 @@
     background-color: var(--secondary-color);
     display: block;
     width: 100%;
-    height: 110vh;
+    height: 130vh;
     align-items: center;
     flex-flow: column;
 }
 
 #title{
-    display: inline-flex;
-    width: 100%;
+    display: flex;
+    width: auto;
     height: auto;
     flex-direction: column;
+    margin-left: 100px;
 }
 .more{
     font-size:3.5vw;
@@ -22,6 +23,77 @@ p{
     display: flex;
     font-family: 'Antic Slab', serif;
     justify-content: flex-start;
+    font-size: 1.5vw;
+    color: var(--white-color);
+}
+
+.less{
+    font-size:2.5vw;
+}
+
+.school{
+    display: flex;
+    width: 650px;
+    height: auto;
+}
+
+.sch{
+    display: flex;
+    flex-direction: row;
+}
+
+.sch >p {
+    display: none;
+    font-family: 'Antic Slab', serif;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     font-size: 2vw;
     color: var(--white-color);
+}
+
+.school:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.sch:hover p{
+    display: flex;
+}
+
+@media screen and (max-width: 1200px){
+    
+    .sch{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    
+    .school{
+        width: 80%;
+    }
+    #title{
+        margin-left:0;
+    }
+    #title > ul > li > p {
+        font-size: 4vw;
+    }
+    #title >ul > p {
+        font-size: 4vw;
+    }
+    .more
+    {
+        font-size: 5vw;
+    }
+    .less
+    {
+        font-size: 4.5vw;
+    }
+    .sch >p{
+        font-size: 3.5vw;
+    }
+    
 }

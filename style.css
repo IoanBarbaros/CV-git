@@ -1,3 +1,7 @@
 @import url("header.css");
 @import url("face.css");
 @import url("info.css");
+
+html{
+    scroll-behavior: smooth;
+}
