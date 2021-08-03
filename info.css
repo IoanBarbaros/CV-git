@@ -146,6 +146,7 @@ p{
   .skills{
       display: flex;
       flex-flow: column;
+      justify-content: center;
   }
   
   .skills > span >p{
@@ -228,6 +229,7 @@ p{
     -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     -webkit-mask-size: 200%;
     animation: shine 2s infinite;
+    z-index: 2;
   }
   
   @keyframes shine {
@@ -255,18 +257,18 @@ p{
         margin-left:0;
     }
     #title > ul > li > p {
-        font-size: 6vw;
+        font-size: 4vw;
     }
     #title >ul > p {
-        font-size: 5vw;
+        font-size: 3.5vw;
     }
     .more
     {
-        font-size: 10vw;
+        font-size: 8vw;
     }
     .less
     {
-        font-size: 8vw;
+        font-size: 6vw;
     }
     .sch >p{
         font-size: 3.5vw;
@@ -288,7 +290,11 @@ p{
         height: 500px;
     }
     .skills >span >p {
-        font-size: 7vw;
+        font-size: 6vw;
+    }
+    .skills >span{
+        display: flex;
+        align-items: center;
     }
     
     
