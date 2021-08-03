@@ -60,84 +60,6 @@ p{
     display: flex;
 }
 
-
-.sectionL {
-    display: flex;
-    flex-flow: row;
-	background-color: var(--secondary-color);
-	height: 100px;
-}
-
-.sectionL > p {
-    font-size: 3vw;
-    color: var(--white-color);
-    display: inline-flex;
-    margin:0;
-    padding: 0;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 20px;
-
-}
-
-.loader {
-	position: relative;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-	width: 50px;
-	height: 50px;
-}
-
-.loader-circles {
-	border-radius: 50px;
-	border: 3px solid transparent;
-	border-top-color: #fff;
-	-webkit-animation: spin 1s linear infinite;
-	animation: spin 1s linear infinite;
-}
-
-.loader-circles:before,
-.loader-circles:after {
-	content: '';
-	position: absolute;
-	top: 5px; 
-	left: 5px;
-	bottom: 5px;
-	right: 5px;
-	border-radius: 50px;
-	border: 3px solid transparent;
-	border-top-color: #fff;
-	filter: alpha(opacity=8);
-	     -khtml-opacity: .8;
-	       -moz-opacity: .8;
-	            opacity: .8;
-	-webkit-animation: spinreverse 5s linear infinite;
-	animation: spinreverse 5s linear infinite;
-}
-
-.loader-circles:before {
-	top: 12px; 
-	left: 12px;
-	bottom: 12px;
-	right: 12px;
-	-webkit-animation: spinreverse 10s linear infinite;
-	animation: spinreverse 10s linear infinite;
-}
-
-
-
-@-webkit-keyframes spin {
-  	0%{ -webkit-transform: rotate(0deg); tranform: rotate(0deg);}
-	100%{ -webkit-transform: rotate(360deg); tranform: rotate(360deg);}
-}
-
-@keyframes spin {
-	0%{ -webkit-transform: rotate(0deg); transform: rotate(0deg);}
-	100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg);}
-}
-
-
 .footer {
     background-color: var(--header-color);
     width: 100%;
@@ -219,6 +141,111 @@ p{
     box-shadow: 0 0 5px var(--secondary-color);
     text-shadow: 0 0 5px var(--secondary-color);
   }
+
+  
+  .skills{
+      display: flex;
+      flex-flow: column;
+  }
+  
+  .skills > span >p{
+        font-size:2vw;
+        color:var(--white-color);
+        align-items: flex-start;
+        padding: 0;
+        margin-bottom: 20px;
+        top: 0;
+  }
+
+  .progressBar {
+    width: 50%;
+    height: 30px;
+    display: none;
+    margin-left:30px;
+    top:0;
+  }
+
+  .progressHtml {
+    width: 80%;
+    display: none;
+    background-color: var(--hover-color);
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+
+  .progressCss{
+    width: 50%;
+    display: none;
+    background-color: var(--hover-color);
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+
+
+@keyframes progressH{
+    0% {
+      width: 0%;
+    }
+    
+    100% {
+      width: 80%;
+    }
+}
+
+@keyframes progressC{
+        0% {
+          width: 0%;
+    }
+        
+        100% {
+          width: 50%;
+        }
+}   
+  .skills >span:hover .progressBar{
+
+    display: flex;
+    border: 2px solid black;
+    border-radius: 7px;
+  }
+  .skills .progressHtml{
+    display: flex;
+    animation-name: progressH;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+  }
+  .skills .progressCss{
+    display: flex;
+    animation-name: progressC;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+  }
+  
+  .skills >span:hover p {
+      mask-image:unset;
+      mask-size: unset;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+  }
+  
+  @keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+  
+
+  
+
+
+
+
 @media screen and (max-width: 800px){
     
     .school{
@@ -228,18 +255,18 @@ p{
         margin-left:0;
     }
     #title > ul > li > p {
-        font-size: 4vw;
+        font-size: 6vw;
     }
     #title >ul > p {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .more
     {
-        font-size: 5vw;
+        font-size: 10vw;
     }
     .less
     {
-        font-size: 4.5vw;
+        font-size: 8vw;
     }
     .sch >p{
         font-size: 3.5vw;
@@ -259,6 +286,9 @@ p{
     }
     .footer{
         height: 500px;
+    }
+    .skills >span >p {
+        font-size: 7vw;
     }
     
     
